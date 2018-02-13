@@ -1,0 +1,61 @@
+Get Req_Token By TimeStamp
+Login
+Auth Token -> Req_token
+Check Username
+Get Req_token By TimeStamp
+Getting Req_token By TimeStamp
+Sample:
+
+POST /req_token/ts/ HTTP/1.1
+Host: traffic.snapwreck.today
+Cookie: API-Key=demo123; 
+
+timestamp=1512089312
+
+Response:
+{"req_token":"9306185051313f386e153bedf5a833f49aec4d8c19313a8099b49614d6c51d9b"}
+
+
+------------------------ 
+Login Your Account
+Login Your Account
+Sample:
+
+POST /login/ HTTP/1.1
+Host: traffic.snapwreck.today
+Cookie: API-Key=demo123; 
+
+username=ip.d&password=FollowMe
+
+Response:
+{"logged":false,"message":"Oops! Your username/email or password is incorrect.","status":-100}
+
+
+------------------------ 
+Get Req_Token By AuthToken + TimeStamp
+Auth Token To Access Your Account
+Sample:
+
+POST /req_token/auth/ HTTP/1.1
+Host: traffic.snapwreck.today
+Cookie: API-Key=demo123; 
+
+AuthToken=D4UHEW3487Y437HW34S8FHA&ts=1512089312
+
+Response:
+{"req_token":"f2e618a0513c3f3877153bcd259833fd9aacce3c51313f50994f963876130d9a"}
+
+
+------------------------ 
+Check Username
+Check Username If Taken Or not
+Sample:
+
+GET /check/?username=IAm1337r00t HTTP/1.1
+Host: sc.1337leaks.info
+
+
+Response:
+{"username":"IAm1337r00t","status":"Available","timestamp":1512114873}
+
+1337r00t@1337leaks.info
